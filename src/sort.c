@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohben-t <mohben-t@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 21:58:03 by mohben-t          #+#    #+#             */
-/*   Updated: 2025/02/28 11:22:24 by mohben-t         ###   ########.fr       */
+/*   Created: 2025/02/28 12:34:18 by mohben-t          #+#    #+#             */
+/*   Updated: 2025/02/28 12:34:19 by mohben-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/push_swap.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void sort_stack(t_stack **stack_a, t_stack **stack_b)
 {
-	size_t	i;
+    int size;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while ((s1[i] || s2[i]) && (i < n))
-	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
-	}
-	return (0);
+    size = get_size(*stack_a);
+    if (issorted(*stack_a))
+        return;
+    
+    if (size == 2)
+        sort_two(stack_a);
+    else if (size == 3)
+        sort_three(stack_a);
+    else if (size <= 5)
+        sort_five(stack_a, stack_b);
+    else
+        radix_sort(stack_a, stack_b,0);
 }

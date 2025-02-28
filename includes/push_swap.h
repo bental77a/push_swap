@@ -6,7 +6,7 @@
 /*   By: mohben-t <mohben-t@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:26:59 by mohben-t          #+#    #+#             */
-/*   Updated: 2025/02/28 06:58:29 by mohben-t         ###   ########.fr       */
+/*   Updated: 2025/02/28 16:08:03 by mohben-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ss(t_stack **a, t_stack **b);
 void	pa(t_stack **a, t_stack **b);
 void	pb(t_stack **a, t_stack **b);
 void	ra(t_stack **a);
-void	ra(t_stack **a);
+void	rb(t_stack **b);
 void	rr(t_stack **a, t_stack **b);
 void	rra(t_stack **a);
 void	rrb(t_stack **b);
@@ -73,11 +73,16 @@ void	free_stack(t_stack **stack);
 
 /*-----------------------------|  FOUNCTIONS |------------------------------------*/
 
-int	checkspaces(char *str);
+int		checkspaces(char *str);
 void	joinargs(char **av, int ac, t_var *var);
 void	initstack(t_var *var);
 void	isdup(t_stack *stack, t_var *var);
-int	issorted(t_stack *stack);
-
+int		issorted(t_stack *stack);
+int 	find_min_position(t_stack *stack);
+void	radix_sort(t_stack **stack_a, t_stack **stack_b, int max_bits);
+void	sort_five(t_stack **stack_a, t_stack **stack_b);
+void	sort_three(t_stack **stack_a);
+void	sort_two(t_stack **stack_a);
+void sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 #endif

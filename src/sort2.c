@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   sort2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohben-t <mohben-t@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 21:58:03 by mohben-t          #+#    #+#             */
-/*   Updated: 2025/02/28 11:22:24 by mohben-t         ###   ########.fr       */
+/*   Created: 2025/02/28 10:22:04 by mohben-t          #+#    #+#             */
+/*   Updated: 2025/02/28 11:43:07 by mohben-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/push_swap.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void sort_two(t_stack **stack_a)
 {
-	size_t	i;
-
-	i = 0;
-	if (n == 0)
-		return (0);
-	while ((s1[i] || s2[i]) && (i < n))
-	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
-	}
-	return (0);
+    if ((*stack_a)->val > (*stack_a)->next->val)
+        sa(stack_a);
 }

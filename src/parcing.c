@@ -6,7 +6,7 @@
 /*   By: mohben-t <mohben-t@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 11:49:17 by aelomari          #+#    #+#             */
-/*   Updated: 2025/02/28 06:46:07 by mohben-t         ###   ########.fr       */
+/*   Updated: 2025/02/28 12:41:47 by mohben-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ void	isdup(t_stack *stack, t_var *var)
 	}
 }
 
-int	issorted(t_stack *stack)
+int	 issorted(t_stack *stack)
 {
 	t_stack	*tmp;
 

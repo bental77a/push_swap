@@ -2,7 +2,7 @@ NAME = push_swap
 SRC_DIR = src
 libft_DIR = libft
 
-SRC_FILES = main.c parcing.c utills.c list_utills.c
+SRC_FILES = main.c parcing.c utills.c list_utils.c
 
 LIBFT_FILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
        ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
