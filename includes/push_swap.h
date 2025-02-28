@@ -6,7 +6,7 @@
 /*   By: mohben-t <mohben-t@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:26:59 by mohben-t          #+#    #+#             */
-/*   Updated: 2025/02/28 16:08:03 by mohben-t         ###   ########.fr       */
+/*   Updated: 2025/02/28 16:31:50 by mohben-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	fs_stacclear(t_stack **lst);
 int	fs_stacsize(t_stack *lst);
 void	errornl(t_var *var);
 int	get_size(t_stack *stack);
-int	search_min(t_var *var);
+int find_min_position(t_stack *stack);
 int	search_max(t_var *var);
 
 
@@ -78,11 +78,10 @@ void	joinargs(char **av, int ac, t_var *var);
 void	initstack(t_var *var);
 void	isdup(t_stack *stack, t_var *var);
 int		issorted(t_stack *stack);
-int 	find_min_position(t_stack *stack);
 void	radix_sort(t_stack **stack_a, t_stack **stack_b, int max_bits);
 void	sort_five(t_stack **stack_a, t_stack **stack_b);
 void	sort_three(t_stack **stack_a);
 void	sort_two(t_stack **stack_a);
-void sort_stack(t_stack **stack_a, t_stack **stack_b);
+void 	sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 #endif

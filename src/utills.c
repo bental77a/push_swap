@@ -6,7 +6,7 @@
 /*   By: mohben-t <mohben-t@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 19:22:08 by mohben-t          #+#    #+#             */
-/*   Updated: 2025/02/28 15:51:06 by mohben-t         ###   ########.fr       */
+/*   Updated: 2025/02/28 16:31:29 by mohben-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,20 +49,25 @@ int	get_size(t_stack *stack)
 	return (i);
 }
 
-int	search_min(t_var *var)
+int find_min_position(t_stack *stack)
 {
-	int		min;
-	t_stack	*temp;
-
-	temp = var->head_a;
-	min = temp->val;
-	while (temp)
-	{
-		if (temp->val < min)
-			min = temp->val;
-		temp = temp->next;
-	}
-	return (min);
+    t_stack *tmp = stack;
+    int min = tmp->val;
+    int min_pos = 0;
+    int current_pos = 0;
+    
+    while (tmp)
+    {
+        if (tmp->val < min)
+        {
+            min = tmp->val;
+            min_pos = current_pos;
+        }
+        current_pos++;
+        tmp = tmp->next;
+    }
+    
+    return min_pos;
 }
 
 int	search_max(t_var *var)
