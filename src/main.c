@@ -11,13 +11,14 @@ int	main(int ac, char **av)
 		initstack(var);
 
 		isdup(var->head_a, var);
-		if (!issorted(var->head_a))
+		if (issorted(var->head_a))
 		{
 			free_stack(&var->head_a);
 			free(var);
 			exit(0);
 		}
-		sort_stack(&var->head_a, &var->head_b);
+		indexstack(var);
+		sort_stack(var, &var->head_a, &var->head_b);
 	}
 	return (0);
 }

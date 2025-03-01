@@ -6,7 +6,7 @@
 /*   By: mohben-t <mohben-t@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:26:59 by mohben-t          #+#    #+#             */
-/*   Updated: 2025/02/28 16:31:50 by mohben-t         ###   ########.fr       */
+/*   Updated: 2025/03/01 11:27:36 by mohben-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,14 @@ void	joinargs(char **av, int ac, t_var *var);
 void	initstack(t_var *var);
 void	isdup(t_stack *stack, t_var *var);
 int		issorted(t_stack *stack);
-void	radix_sort(t_stack **stack_a, t_stack **stack_b, int max_bits);
 void	sort_five(t_stack **stack_a, t_stack **stack_b);
 void	sort_three(t_stack **stack_a);
 void	sort_two(t_stack **stack_a);
-void 	sort_stack(t_stack **stack_a, t_stack **stack_b);
-
+void 	sort_stack(t_var *var, t_stack **stack_a, t_stack **stack_b);
+void	send_to_a(t_var *var);
+void	send_to_b(t_var *var);
+void	indexstack(t_var *var);
+void	bubblesort(t_var *var);
+void	indexit(t_var *var);
+void	swap(int *a, int *b);
 #endif

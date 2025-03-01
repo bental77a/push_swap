@@ -6,10 +6,11 @@ void sort_five(t_stack **stack_a, t_stack **stack_b)
 	int	min_pos;
 
 	i = 0;
+    // 5 2 3 4 1
     while (i < 2)
     {
         min_pos = find_min_position(*stack_a);//1
-        while (min_pos > 0)
+        while (min_pos > 0) // true
         {
             if (min_pos <= get_size(*stack_a) / 2)
                 ra(stack_a);
@@ -20,6 +21,7 @@ void sort_five(t_stack **stack_a, t_stack **stack_b)
         pb(stack_a, stack_b);
 		i++;
     }
+
     sort_three(stack_a);
     while (*stack_b)
         pa(stack_a, stack_b);

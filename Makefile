@@ -3,8 +3,9 @@ SRC_DIR = src
 LIBFT_DIR = libft
 MOVES_DIR = moves
 
-SRC_FILES = main.c parcing.c utills.c list_utils.c sort_a_lot.c sort.c \
-			sort2.c sort3.c sort5.c 
+SRC_FILES = main.c parcing.c utills.c list_utils.c sort.c \
+			sort2.c sort3.c sort5.c index_it.c send_to_a.c \
+			send_to_b.c
 
 LIBFT_FILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
        ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
